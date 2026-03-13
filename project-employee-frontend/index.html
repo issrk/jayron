@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSEUF-CI Employees CRUD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+      margin-bottom: 30px;
+    }
+    #container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    #form {
+      margin-bottom: 15px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #update {
+      background-color: #2196F3;
+    }
+    #update:hover {
+      background-color: #0b7dda;
+    }
+    #content {
+      margin-top: 30px;
+    }
+    #content li {
+      background: #f9f9f9;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #content a {
+      color: #e74c3c;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    #content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>MSEUF-CI Employees CRUD</h1>
+  <div id="container">
+    <form id="employeeForm">
+      <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname">
+      </div>
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+      </div>
+      <div class="form-group">
+        <label for="ip_address">IP Address</label>
+        <input type="text" name="ip_address" id="ip_address">
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <input type="hidden" id="ID">
+      <button id="add">Add Employee</button>
+      <button id="update">Update</button>
+    </form>
+  </div>
+
+  <div id="content"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
